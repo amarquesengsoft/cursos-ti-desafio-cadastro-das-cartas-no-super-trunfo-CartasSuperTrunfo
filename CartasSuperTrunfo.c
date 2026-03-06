@@ -31,6 +31,8 @@ int main() {
         float pib_percapita2;
         float superPoder2;
 
+        int escolhaJogador;
+
     
    
     // Implemente a lógica para solicitar ao usuário que insira os dados das cidades
@@ -175,12 +177,88 @@ int main() {
     }
     // Certifique-se de que o sistema mostre claramente qual carta venceu e com base em qual atributo.
 
-    if (populacao1 > populacao2) {
+    printf("   ***Agora escolha qual atributo você quer fazer uma comparação:***   \n\n");
+    printf("Digite 1 para comparar o atributo: População\n");
+    printf("Digite 2 para comparar o atributo: Área\n");
+    printf("Digite 3 para comparar o atributo: PIB\n");
+    printf("Digite 4 para comparar o atributo: Número de pontos turísticos\n");
+    printf("Digite 5 para comparar o atributo: Densidade Populacional\n");
+    printf("Digite 6 para comparar o atributo: PIB Per Capita\n");
+    printf("Digite 7 para comparar o atributo: Super Poder\n");
+    scanf("%d", &escolhaJogador);
+
+    switch (escolhaJogador)
+    {
+    case 1: 
+        printf("Você escolheu a opção 1:\nAtributo a ser comparado: População\n");
+    if (populacao1 > populacao2)
+    {
         printf("A Cidade de %s tem maior população.\nA Cidade de %s venceu!!\n", nome_da_cidade1, nome_da_cidade1);
     } else {
-    printf("A Cidade de %s tem maior população.\nA Cidade de %s venceu!!\n", nome_da_cidade2, nome_da_cidade2);
-   
+       printf("A Cidade de %s tem maior população.\nA Cidade de %s venceu!!\n", nome_da_cidade2, nome_da_cidade2);
     }
+        break;
+    case 2: 
+        printf("Você escolheu a opção 2:\nAtributo a ser comparado: Área\n");
+    if (area1 > area2) 
+    {
+        printf("A cidade de %s tem área maior.\nA cidade de %s venceu!.\n", nome_da_cidade1, nome_da_cidade1);
+    } else {
+        printf("A cidade de %s tem área maior.\nA cidade de %s venceu!.\n", nome_da_cidade2, nome_da_cidade2);
+    }
+        break;
+    case 3: 
+        printf("Você escolheu a opção 3:\nAtributo a ser comparado: PIB\n");
+    if (pib1 > pib2)
+    {
+        printf("O PIB da cidade de %s é maior.\nA cidade de %s venceu!.\n", nome_da_cidade1, nome_da_cidade1);
+    } else {
+    printf("O PIB da cidade de %s é maior.\nA cidade de %s venceu!\n", nome_da_cidade2, nome_da_cidade2);
+    }
+        break;
+    case 4: 
+        printf("Você escolheu a opção 4:\nAtributo a ser comparado: Número de pontos turísticos\n");
+    if (numero_de_pontos_turisticos1 > numero_de_pontos_turisticos2)
+    {
+        printf("A quantidade de pontos turísticos da cidade de %s é maior.\nA cidade de %s venceu!\n", nome_da_cidade1, nome_da_cidade1);
+    } else {
+    printf("A quantidade de pontos turísticos da cidade de %s é maior.\nA cidade de %s venceu!\n", nome_da_cidade2, nome_da_cidade2);
+    }
+        break;
+    case 5: 
+        printf("Você escolheu a opção 5:\nAtributo a ser comparado: Densidade Populacional\n");
+    if (densidade_populacional1 < densidade_populacional2)
+    {
+        printf("A densidade populacional da cidade de %s é menor.\nA cidade de %s venceu!\n", nome_da_cidade1, nome_da_cidade1);
+    } else {
+    printf("A densidade populacional da cidade de %s é menor.\nA cidade de %s venceu!\n", nome_da_cidade2, nome_da_cidade2);
+    }
+        break;
+    case 6: 
+        printf("Você escolheu a opção 6:\nAtributo a ser comparado: PIB Per Capita\n");
+    if (pib_percapita1 > pib_percapita2)
+    {
+        printf("O pib per capita da cidade de %s é maior.\nA cidade de %s venceu!\n", nome_da_cidade1, nome_da_cidade1);
+    } else {
+    printf("O pib per capita da cidade de %s é maior.\nA cidade de %s venceu!\n", nome_da_cidade2, nome_da_cidade2);
+    }
+        break;
+    case 7: 
+        printf("Você escolheu a opção 7:\nAtributo a ser comparado: Super Poder\n");
+    if (superPoder1 > superPoder2) {
+        printf("O super poder da cidade de %s é maior.\nA cidade de %s venceu!\n", nome_da_cidade1, nome_da_cidade1);
+    } else {
+    printf("O super poder da cidade de %s é maior.\nA cidade de %s venceu!\n", nome_da_cidade2, nome_da_cidade2);
+    }
+        break;            
+    default:
+        printf("Opção Invalida!\n");
+        printf("Escolha uma opção de 1 a 7!!\n");
+        break;
+    }
+
+
+   
 
 
     return 0;
